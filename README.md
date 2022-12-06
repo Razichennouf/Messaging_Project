@@ -47,11 +47,62 @@
       => $ ssh-keygen -b 4096
    Copying our public key to the remote machine
       => $ ssh-copy-id coreyms@45.33.123.214
+   Installing and implementing <b>Virtualenv</b>
+      Why ? it is a way that you can separete different python environments for different projects 
+      e.g say you have multiple projects Django or Flask each one of these projects may be using a different version of Django or different version of Flask 
+        now if you go and upgrade that package and youre global size packages then it could brake a couple of your websites it would be <b>better</b> if the 	     projects had an <b>isolated</b> environment where they had only the <b>Dependencies</b> and the <b>Packages</b> that they need and the specific                 versions that they needed
+      Installing the Virualenv
+	$ pip install virtualenv
+      Creating our First environment
+        $ mkdir Project_Flask
+        $ virualenv project1_env
+      Creating a Venv with specific Python version
+        $ virualenv -p /usr/bin/python2.6 Py2.6_env
+      Activating Our newly created Virtualenv using the <b>activate</b> binary from source function
+        $ source Project1_env/bin/activate
+      How to check ?
+        It will now add <b>(Project1_env)</b> to your prompt and it is the only indicator that we are in the Virtual environment
+      How to <b>Wrap</b> all packages and the version numbers to use in another project to a text file
+      	$ pip freeze --local > requirements.txt
+      How to leave the virtual environment to global environment
+      	$ deactivate
 <h2>Technical overview</h2>
-    * Connecting <b>web application</b> to <b>web servers</b> * 
-    Our Stack we are going to use is NGINX & GUNICORN WSGI
+    * Connecting <b>web application</b> to <b>web servers</b> * * Our Stack we are going to use are NGINX & GUNICORN WSGI *
       <b>Gunicorn</b> is a pure-Python HTTP server for WSGI applications. It allows you to run any Python application concurrently by running multiple Python             rocesses within a single dyno. It provides a perfect balance of performance, flexibility, and configuration simplicity
       <b>WSGI</b> stands for "Web Server Gateway Interface". It is used to forward requests from a web server (such as Apache or NGINX) to a backend Python web application or framework. From there, responses are then passed back to the webserver to reply to the requestor
+
+<h1>Let's Get started !</h1>
+     Creating the Python file
+        $ mousepad Flask_Project.py
+	  from flask import Flask
+	  app = FLask(__name__)
+	  @app.route("/")
+	  def hello():
+	      return "hello World!"
+     Adding a environment variable to the <b>File</b> that we want to be our flask application
+         Linux : $ export FLASK_APP=Flask_Project.py
+	 Windows : set Flask_Project.py
+     Running your FLASK app
+        $ flask run
+     Enabeling FLASK_DEBUG Mode
+        $ export FLASK_DEBUG=1
+        Why we need  DEBUG Mode ? : To automatically reload our project without restarting the web server
+     To run the Flask Appp using $ Python
+     	if __name__ = '__name__':
+ 	   app.run(debug=True)
+	 $ Python3 Flask_Project.py
+     <b>Why ?</b> www.facebook.com/login.py =  www.facebook.com/ 
+         @app.route(/)
+	 @app.route(/index.py)
+	 def login():
+	     return <Content>;
+     <b>Hint : </b>To prevent errors making a GET requests on the server racine "/" while using <b>render_template</b> module you should create a directory 		called <b>templates</b> and put all your html format into it.  
+     	       <b>Beware !</b> in flask there are predefined directories (Statically defined) that searches into it for example 
+	           <link rel="stylesheet" href="<b>css/style.css</b>"> => it does'nt work so you should create :
+		      $ mkdir static
+		      $ move css static
+		    so the point is that the root folder is predefined / => static , templates (render_template) ect ...
+<h1>Cloud deployment</h1>
 </pre>	
 </body>
 </html>
