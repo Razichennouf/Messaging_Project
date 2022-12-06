@@ -1,7 +1,8 @@
 <html>
 <body>
-<h2>Setting up environment Staging and security essentials on remote machine</h2>
+
 <pre>
+<h2>Setting up environment Staging and security essentials on remote machine</h2>
     Updating system : Now if we are using bare bones ubuntu server we need to do couple of things to do the setup first so Like updating the kernel ect ..
       => $ apt update && apt upgrade -y
     Change the hostname
