@@ -1,5 +1,6 @@
+<html>
+<body>
 <h2>Setting up environment Staging and security essentials</h2>
-
     Updating system : Now if we are using bare bones ubuntu server we need to do couple of things to do the setup first so Like updating the kernel ect ..
       => $ apt update && apt upgrade -y
     Change the hostname
@@ -30,10 +31,12 @@
       => $sudo ufw default deny  incoming "incoming traffic"
       => $sudo ufw allow ssh
 		rules updated
-     => $sudo ufw allow 5000
+      => $sudo ufw allow 5000
 		rules updated
    For security matters we dont allow port 80 and http traffic yet until we are sure everything is working the way that we wanted to.
-     => $sudo ufw enable 
+      => $sudo ufw enable 
    To check the status of the thing we allowed or disawllowed
-     => $sudo ufw status 
-
+      => $sudo ufw status 
+	
+</body>
+</html>
