@@ -1,5 +1,5 @@
 <h1>Setting up environment Staging and security essentials</h2>
-<pre>
+
     Updating system : Now if we are using bare bones ubuntu server we need to do couple of things to do the setup first so Like updating the kernel ect ..
       => $ apt update && apt upgrade -y
     Change the hostname
@@ -27,4 +27,4 @@
 																									we dont need to login to our system with a password.
 				$ sudo service sshd restart : Restart our ssh daemon so configuration file changes take place.
     Instead of using Iptables based on debian or firewall-cmd based on fedora we are going to install <b>ufw</b> the easiest way to <b>manage</b> our firewall       rules.
-</pre>
+
