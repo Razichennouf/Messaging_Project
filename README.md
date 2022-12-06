@@ -1,4 +1,4 @@
-<h1>Setting up environment Staging and security essentials</h2>
+<h2>Setting up environment Staging and security essentials</h2>
 
     Updating system : Now if we are using bare bones ubuntu server we need to do couple of things to do the setup first so Like updating the kernel ect ..
       => $ apt update && apt upgrade -y
@@ -25,4 +25,15 @@
     Restart our ssh daemon so configuration file changes take place.
       => $ sudo service sshd restart 
     Instead of using Iptables based on debian or firewall-cmd based on fedora we are going to install <b>ufw</b> the easiest way to <b>manage</b> our firewall       rules.
+    We now setup a few rules here => Here we are allowing rules for certain ports
+      => $sudo ufw default allow outgoing "outgoing traffic"
+      => $sudo ufw default deny  incoming "incoming traffic"
+      => $sudo ufw allow ssh
+		rules updated
+     => $sudo ufw allow 5000
+		rules updated
+   For security matters we dont allow port 80 and http traffic yet until we are sure everything is working the way that we wanted to.
+     => $sudo ufw enable 
+   To check the status of the thing we allowed or disawllowed
+     => $sudo ufw status 
 
