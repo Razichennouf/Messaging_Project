@@ -102,6 +102,8 @@
 		      $ mkdir static
 		      $ move css static
 		    so the point is that the root folder is predefined / => static , templates (render_template) ect ...
+<h1>Database setup</h1>
+    $ pip install flask-sqlalchemy
 <h1>Cloud deployment</h1>
 </pre>	
 </body>
