@@ -105,6 +105,7 @@
 <h1>Database setup</h1>
     $ pip install flask-sqlalchemy
 <h1>Cloud deployment</h1>
+    <b>CI/CD Pipeline</b>
 </pre>	
 </body>
 </html>
