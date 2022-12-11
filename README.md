@@ -105,7 +105,7 @@
 <h1>Database setup</h1>
     $ pip install flask-sqlalchemy
 <h1>Cloud deployment</h1>
-    <b>CI/CD Pipeline</b>
+    <b>CI/CD Pipeline</b> : https://www.youtube.com/watch?v=NwzJCSPSPZs&ab_channel=BlockExplorer
 </pre>	
 </body>
 </html>
