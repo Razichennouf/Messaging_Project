@@ -106,7 +106,7 @@
     $ pip install flask-sqlalchemy
 <h1>Authentication</h1>
  LDAP authentication involves verifying provided usernames and passwords by connecting with a directory service that uses the LDAP protocol. Some directory-servers that use LDAP in this manner are OpenLDAP, MS Active Directory, and OpenDJ.
-<b>Quote<b/> : An authentication method is a process of confirming an identity.
+<b>Quote</b> : An authentication method is a process of confirming an identity.
   As proceeding with the <b>Isolation</b> of the environment with virtualenv now we are going to install the <b>LDAP3</b> 
   $ pip install ldap3
  <h1>Cloud deployment</h1>
