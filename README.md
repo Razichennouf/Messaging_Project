@@ -104,6 +104,8 @@
 		    so the point is that the root folder is predefined / => static , templates (render_template) ect ...
 <h1>Database setup</h1>
     $ pip install flask-sqlalchemy
+<h1>Authentication</h1>
+ LDAP authentication involves verifying provided usernames and passwords by connecting with a directory service that uses the LDAP protocol. Some directory-servers that use LDAP in this manner are OpenLDAP, MS Active Directory, and OpenDJ.
 <h1>Cloud deployment</h1>
     <b>CI/CD Pipeline</b> : https://www.youtube.com/watch?v=NwzJCSPSPZs&ab_channel=BlockExplorer
 </pre>	
