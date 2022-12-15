@@ -109,7 +109,14 @@
 <b>Quote</b> : An authentication method is a process of confirming an identity.
   As proceeding with the <b>Isolation</b> of the environment with virtualenv now we are going to install the <b>LDAP3</b> 
   $ pip install ldap3
- <h1>Cloud deployment</h1>
+
+To start the connection on a SSL socket:
+>>> server = Server('ipa.demo1.freeipa.org', use_ssl=True, get_info=ALL)
+>>> conn = Connection(server, 'uid=admin,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org', 'Secret123', auto_bind=True)
+>>> print(conn)
+ldaps://ipa.demo1.freeipa.org:636 - ssl - user: uid=admin,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org - bound - open - <local: 192.168.1.101:51438 - remote: 209.132.178.99:636> - tls not started - listening - SyncStrategy - internal decoder
+
+<h1>Cloud deployment</h1>
     <b>CI/CD Pipeline</b> : https://www.youtube.com/watch?v=NwzJCSPSPZs&ab_channel=BlockExplorer
 </pre>	
 </body>
