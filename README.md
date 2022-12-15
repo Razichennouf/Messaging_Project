@@ -110,6 +110,8 @@
   As proceeding with the <b>Isolation</b> of the environment with virtualenv now we are going to install the <b>LDAP3</b> 
   $ pip install ldap3
 
+LDAP url format :https://ldap.com/ldap-urls/
+
 To start the connection on a SSL socket:
 >>> server = Server('ipa.demo1.freeipa.org', use_ssl=True, get_info=ALL)
 >>> conn = Connection(server, 'uid=admin,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org', 'Secret123', auto_bind=True)
