@@ -113,10 +113,12 @@
 LDAP url format :https://ldap.com/ldap-urls/
 
 To start the connection on a SSL socket:
->>> server = Server('ipa.demo1.freeipa.org', use_ssl=True, get_info=ALL)
->>> conn = Connection(server, 'uid=admin,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org', 'Secret123', auto_bind=True)
->>> print(conn)
-ldaps://ipa.demo1.freeipa.org:636 - ssl - user: uid=admin,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org - bound - open - <local: 192.168.1.101:51438 - remote: 209.132.178.99:636> - tls not started - listening - SyncStrategy - internal decoder
+	>>> server = Server('ipa.demo1.freeipa.org', use_ssl=True, get_info=ALL)
+	>>> conn = Connection(server, 'uid=admin,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org', 'Secret123', auto_bind=True)
+	>>> print(conn)
+	ldaps://ipa.demo1.freeipa.org:636 - ssl - user: uid=admin,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org - bound - open - <local: 192.168.1.101:51438 - remote: 209.132.178.99:636> - tls not started - listening - SyncStrategy - internal decoder
+
+You need to create your certificate to use it on LDAP and all other protocols likes SSL
 
 <h1>Cloud deployment</h1>
     <b>CI/CD Pipeline</b> : https://www.youtube.com/watch?v=NwzJCSPSPZs&ab_channel=BlockExplorer
