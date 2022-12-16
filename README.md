@@ -119,7 +119,7 @@ To start the connection on a SSL socket:
 	ldaps://ipa.demo1.freeipa.org:636 - ssl - user: uid=admin,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org - bound - open - <local: 192.168.1.101:51438 - remote: 209.132.178.99:636> - tls not started - listening - SyncStrategy - internal decoder
 
 You need to create your certificate to use it on LDAP and all other protocols likes SSL
-
+<b>LDAP namespace Structure</b> : https://www.informit.com/articles/article.aspx?p=101405&seqNum=7
 <h1>Cloud deployment</h1>
     <b>CI/CD Pipeline</b> : https://www.youtube.com/watch?v=NwzJCSPSPZs&ab_channel=BlockExplorer
 </pre>	
