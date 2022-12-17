@@ -120,6 +120,12 @@ To start the connection on a SSL socket:
 
 You need to create your certificate to use it on LDAP and all other protocols likes SSL
 <b>LDAP namespace Structure</b> : https://www.informit.com/articles/article.aspx?p=101405&seqNum=7
+<h1>App security</h1>
+   1) First we have to setup and put the password hashed into our database 
+ 	hint : the SHA1 is deprecated so please do not use it anymore since 2004 computers could break into those hashes
+   2) Secondly we have to print account status login globally f.e if e-mail isnt into the database please do not print an error 
+        like 'Email does not exist' here you are guiding the hacker and checking if the email exists into your database or no
+	so try to use global and general terms like 'Email or Password incorrect'.
 <h1>Cloud deployment</h1>
     <b>CI/CD Pipeline</b> : https://www.youtube.com/watch?v=NwzJCSPSPZs&ab_channel=BlockExplorer
 </pre>	
