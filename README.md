@@ -104,6 +104,11 @@
 		    so the point is that the root folder is predefined / => static , templates (render_template) ect ...
 <h1>Database setup</h1>
     $ pip install flask-sqlalchemy
+    $ mousepad __ini__
+    	db = SQLAlchemy()
+	DB_NAME = ".database.db" => we set the database file as a hidden file we add "."
+    	app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+   	db.init_app(app)
 <h1>Authentication</h1>
  <b>LDAP</b> authentication involves verifying provided usernames and passwords by connecting with a directory service that uses  the LDAP protocol. Some directory-servers that use LDAP in this manner are OpenLDAP, MS Active Directory, and OpenDJ.
 <b>Quote</b> : An authentication method is a process of confirming an identity.
@@ -126,9 +131,10 @@ You need to create your certificate to use it on LDAP and all other protocols li
    2) Secondly we have to print account status login globally f.e if e-mail isnt into the database please do not print an error 
         like 'Email does not exist' here you are guiding the hacker and checking if the email exists into your database or no
 	so try to use global and general terms like 'Email or Password incorrect'.
-   3)We register those routers with <b>blueprints</b> to counter traversal and make no prefixes all from root route
-    app.register_blueprint(views, url_prefix='/')
-    app.register_blueprint(auth, url_prefix='/')
+   3) We register those routers with <b>blueprints</b> to counter traversal and make no prefixes all from root route
+       app.register_blueprint(views, url_prefix='/')
+       app.register_blueprint(auth, url_prefix='/')
+    4)
 <h1>Cloud deployment</h1>
     <b>CI/CD Pipeline</b> : https://www.youtube.com/watch?v=NwzJCSPSPZs&ab_channel=BlockExplorer
 </pre>	
