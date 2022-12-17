@@ -136,6 +136,37 @@ You need to create your certificate to use it on LDAP and all other protocols li
        app.register_blueprint(auth, url_prefix='/')
     4)
 <h1>Cloud deployment</h1>
+1) configure and enable virtual host
+       sudo nano /etc/apache2/sites-available/webApp.conf
+	<VirtualHost *:80>
+		ServerName ip
+		ServerAdmin email@mywebsite.com
+		WSGIScriptAlias / /var/www/webApp/webapp.wsgi
+		<Directory /var/www/webApp/webApp/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		Alias /static /var/www/webApp/webApp/static
+		<Directory /var/www/webApp/webApp/static/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+		LogLevel warn
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
+	</VirtualHost>
+2)      sudo a2ensite webApp 
+	  systemctl reload apache2
+3)   Implement the GUNICORN .wsgi file with the configuration
+	    #!/usr/bin/python
+		import sys
+		import logging
+		logging.basicConfig(stream=sys.stderr)
+		sys.path.insert(0,"/var/www/webApp/")
+
+		from webApp import app as application
+		application.secret_key = 'Add your secret key'
+	     # Restart your apache server : $ systemctl reload apache2
     <b>CI/CD Pipeline</b> : https://www.youtube.com/watch?v=NwzJCSPSPZs&ab_channel=BlockExplorer
 </pre>	
 </body>
