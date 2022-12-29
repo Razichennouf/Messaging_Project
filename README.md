@@ -134,7 +134,8 @@ You need to create your certificate to use it on LDAP and all other protocols li
    3) We register those routers with <b>blueprints</b> to counter traversal and make no prefixes all from root route
        app.register_blueprint(views, url_prefix='/')
        app.register_blueprint(auth, url_prefix='/')
-    4)
+    4) 
+ <b>Commands may be helpfull</b> : systemctl daemon-reload ; dpkg-reconfigure slapd <= in case forgotten password
 <h1>Cloud deployment</h1>
 1) configure and enable virtual host
        sudo nano /etc/apache2/sites-available/webApp.conf
