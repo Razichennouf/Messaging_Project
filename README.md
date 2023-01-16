@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Messaging_Project
-=======
 <html>
 <body>
 
@@ -176,4 +173,3 @@ You need to create your certificate to use it on LDAP and all other protocols li
 </pre>	
 </body>
 </html>
->>>>>>> main
