@@ -113,6 +113,8 @@
  <b>LDAP</b> authentication involves verifying provided usernames and passwords by connecting with a directory service that uses  the LDAP protocol. Some directory-servers that use LDAP in this manner are OpenLDAP, MS Active Directory, and OpenDJ.
 <b>Quote</b> : An authentication method is a process of confirming an identity.
   As proceeding with the <b>Isolation</b> of the environment with virtualenv now we are going to install the <b>LDAP3</b> 
+  <b>My approach to ldap authentification and data migration from sql database to LDAP ldif</b>
+  	Script bash or batch automated to migrate data every time sql query triggered via lambda function
   $ pip install python-ldap
   $ apt-get install build-essential python3-dev libldap2-dev libsasl2-dev slapd ldap-utils tox lcov valgrind
 

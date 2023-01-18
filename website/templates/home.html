@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}Inbox{% endblock %} {% block content
+%}
+<h1 align="center"> {{ user.first_name }} & Guest </h1>
+<ul class="list-group list-group-flush" id="notes">
+  {% for message in user.messages %}
+  <li class="list-group-item">
+	  <b>{{ user.first_name }} :</b> {{ message.data }}
+    <button type="button" class="close" onclick="deleteMessage({{ message.id }})">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+<form method="POST">
+  <textarea name="message" id="message" class="form-control"></textarea>
+  <br />
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Send</button>
+  </div>
+</form>
+{% endblock %}

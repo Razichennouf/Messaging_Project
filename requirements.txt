@@ -2,7 +2,7 @@ flask
 Flask-SQLAlchemy
 flask-login
 compat-openldap.i386 0:2.1.30-6.4E
-		openldap-clients.i386 0:2.2.13-6.4E
-		openldap-devel.i386 0:2.2.13-6.4E
-		openldap-servers.i386 0:2.2.13-6.4E
-		openldap-servers-sql.i386 0:2.2.13-6.4E
+openldap-clients.i386 0:2.2.13-6.4E
+openldap-devel.i386 0:2.2.13-6.4E
+openldap-servers.i386 0:2.2.13-6.4E
+openldap-servers-sql.i386 0:2.2.13-6.4E
