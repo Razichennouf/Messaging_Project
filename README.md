@@ -171,7 +171,7 @@ You need to create your certificate to use it on LDAP and all other protocols li
 		from webApp import app as application
 		application.secret_key = 'Add your secret key'
 	     # Restart your apache server : $ systemctl reload apache2
-    <b>CI/CD Pipeline</b> : https://www.youtube.com/watch?v=NwzJCSPSPZs&ab_channel=BlockExplorer
+  <!--  <b>CI/CD Pipeline</b> : https://www.youtube.com/watch?v=NwzJCSPSPZs&ab_channel=BlockExplorer -->
 </pre>	
 </body>
 </html>
