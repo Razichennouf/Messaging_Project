@@ -4,12 +4,12 @@ from os import path
 from flask_login import LoginManager
 
 db = SQLAlchemy()
-DB_NAME = ".database.db"
+DB_NAME = "database.db"
 
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'hjshjhdjah kjshkjdhjs'
+    app.config['SECRET_KEY'] = 'AZ55DAFRE5EF56AZ6E6AZ6E88AZEA7C7CAC7DA'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
 
@@ -21,7 +21,7 @@ def create_app():
 
     from .models import User, Message
 
-    create_database(app)
+    #create_database(app)
 
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'
@@ -30,11 +30,13 @@ def create_app():
     @login_manager.user_loader
     def load_user(id):
         return User.query.get(int(id))
-
+    with app.app_context():
+        db.create_all()
     return app
 
-
-def create_database(app):
-    if not path.exists('website/' + DB_NAME):
-        db.create_all(app=app)
-        print('Created Database!')
+# This is an deprecated approach to create SQL ALchemy 
+#Flask-SQLAlchemy 3 no longer accepts an app argument to methods like create_all. Instead, it always requires an active Flask application context.
+#def create_database(app):
+#    if not path.exists('./' + DB_NAME):
+#        db.create_all(app=app)
+#        print('Created Database!')
